@@ -3,8 +3,9 @@
 
 
 ## Test Case 1: 
-| Name: | Check that currency matches with selected currency of selected country  |
+| Id: | Country-1  |
 | :--- | :----------- |
+| Name: | Check that currency matches with selected currency of selected country  |
 | Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/   |
 | Steps: | 1. Select country from country list except from  “Rest of World”. |
 ||2. Pay attention to the currency of the selected country |
@@ -13,8 +14,9 @@
 | Result: |  |
    
 ## Test Case 2: 
-| Name: | Goods that we show to the user correspond to the goods of the selected region  |
+| Id: | Country-2  |
 | :--- | :----------- |
+| Name: | Goods that we show to the user correspond to the goods of the selected region  |
 | Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/   |
 | Steps: | 1. Select country from country list |
 ||2. Open database of selected country |
@@ -23,8 +25,9 @@
 | Result: |  |
 
 ## Test Case 3: 
-| Name: | Check that language matches with language of selected country  |
+| Id: | Country-3  |
 | :--- | :----------- |
+| Name: | Check that language matches with language of selected country  |
 | Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/   |
 | Steps: | 1. Select country from country list |
 ||2. Pay attention to the language of the selected country |
