@@ -11,6 +11,7 @@
 ||4. Select size of product's item |
 | Expected result:| Popup with "Checkout" and "Continue shopping" buttons is displayed. Product item is added to the shopping cart. |
 | Result: |  |
+
 ## Test Case 2: 
 | Id: | 2  |
 | :--- | :----------- |
@@ -21,6 +22,23 @@
 | Expected result:| The product's item is removed from the shopping cart. The heart icon has changed color to yellow. The product's item is added to wishlist |
 | Result: |  |
 
+## Test Case 3: 
+| Id: | 3  |
+| :--- | :----------- |
+| Name: | Checkout of product's item  |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127|
+|| Opened https://www.drmartens.com/|
+|| At least 1 product's item is added to the shopping cart  |
+
+
+|   | Steps  | Expected results |
+|:------------- |:---------------|:-------------|
+| 1 | Hover on the shopping cart in the header | Shopping cart with added item and "Checkout" button is displayed |
+| 2 | Click on the "Checkout" button |  The shopping cart page is opened   |
+| 3 | Click on the "Checkout" button and select "Checkout as a guest" | The shipping and billing page is opened  |
+| 4 | Fill in correct data and click "Continue to payment" button | The payment page is opened  |
+| 5 | Select credit / debet card payment method | Credit cart credentials fields are displayed |
+| 6 | Enter credit cart credentials and click "Place order" button | The order is placement  |
 
 
 # Localization Test Cases 
