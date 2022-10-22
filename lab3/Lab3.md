@@ -4,11 +4,10 @@
 | Id: | 1  |
 | :--- | :----------- |
 | Name: | Adding product's items to the shopping cart  |
-| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/   |
-| Steps: | 1. Click the Woman category in the Header |
-||2. Hover over the any image of product's item |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/, chosen location: United Kingdom  |
+| Steps: | 1. [Open the product's item page](https://www.drmartens.com/us/en/1460-serena-women%27s-faux-fur-lined-leather-boots/p/27782225) |
+||2. Select size of product's item |
 ||3. Click on "Add to bag" button |
-||4. Select size of product's item |
 | Expected result:| Popup with "Checkout" and "Continue shopping" buttons is displayed. Product item is added to the shopping cart. |
 | Result: |  |
 
@@ -16,7 +15,7 @@
 | Id: | 2  |
 | :--- | :----------- |
 | Name: | Moving product's items to the wishlist  |
-| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/, at least 1 product's item is added to the shopping cart   |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/, chosen location: United Kingdom, [at least 1 product's item](https://www.drmartens.com/us/en/p/15265001) is added to the shopping cart   |
 | Steps: | 1. Click on the shopping cart in the header |
 ||2. Click on the "MOVE TO WISHLIST" button under the product's item |
 | Expected result:| The product's item is removed from the shopping cart. The heart icon has changed color to yellow. The product's item is added to wishlist |
@@ -25,20 +24,105 @@
 ## Test Case 3: 
 | Id: | 3  |
 | :--- | :----------- |
-| Name: | Checkout of product's item  |
-| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127|
-|| Opened https://www.drmartens.com/|
-|| At least 1 product's item is added to the shopping cart  |
+| Name: | Deleting product's items from the wishlist  |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/, chosen location: United Kingdom, [at least 1 product's item](https://www.drmartens.com/us/en/p/15265001) is added to the wishlist   |
+| Steps: | 1. [Go to wishlist](https://www.drmartens.com/us/en/wishlist) (Click on the heart icon in the header) |
+||2. Click on the "X" icon on the product's item |
+| Expected result:| The product's item is removed from the wishlist |
+| Result: |  |
 
+## Test Case 4: 
+| Id: | 4  |
+| :--- | :----------- |
+| Name: | Displaying recently viewed items  |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/, chosen location: United Kingdom   |
+| Steps: | 1. [Open the product's item page](https://www.drmartens.com/us/en/1460-serena-women%27s-faux-fur-lined-leather-boots/p/27782225) |
+||2. Click on the eye icon in the header to go to the RECENTLY VIEWED page |
+| Expected result:| Product item is displayed on the  RECENTLY VIEWED page. |
+| Result: |  |
+
+## Test Case 5: 
+| Id: | 5  |
+| :--- | :----------- |
+| Name: | Adding product's items to the shopping cart without selecting size  |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/, chosen location: United Kingdom   |
+| Steps: | 1. [Open the product's item page](https://www.drmartens.com/us/en/1460-serena-women%27s-faux-fur-lined-leather-boots/p/27782225) |
+||2. Click on the 'ADD TO BAG' |
+| Expected result:|  above the 'ADD TO BAG' button an error message 'Please choose a size' is displayed, the item is not added to the shopping cart. |
+| Result: |  |
+
+## Test Case 6: 
+| Id: | 6  |
+| :--- | :----------- |
+| Name: | Applying incorrect Promo Code |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, opened https://www.drmartens.com/, chosen location: United Kingdom, [at least 1 product's item](https://www.drmartens.com/us/en/p/15265001) is added to the shopping cart    |
+| Steps: | 1. Click on the shopping cart in the header |
+||2. Click on the 'PROMO CODE' box in the 'TOTAL' block  |
+||3. Enter "ffffffff" and click 'APPLY'|
+| Expected result:| Promo box has changed stroke color to red, the message "Promo code not applied" is displayed under box |
+| Result: |  |
+
+## Test Case 7: 
+| Id: | 7  |
+| :--- | :----------- |
+| Name: | Search result  |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127|
+|| Opened https://www.drmartens.com/, chosen location: United Kingdom|
 
 |   | Steps  | Expected results |
 |:------------- |:---------------|:-------------|
-| 1 | Hover on the shopping cart in the header | Shopping cart with added item and "Checkout" button is displayed |
-| 2 | Click on the "Checkout" button |  The shopping cart page is opened   |
-| 3 | Click on the "Checkout" button and select "Checkout as a guest" | The shipping and billing page is opened  |
-| 4 | Fill in correct data and click "Continue to payment" button | The payment page is opened  |
-| 5 | Select credit / debet card payment method | Credit cart credentials fields are displayed |
-| 6 | Enter credit cart credentials and click "Place order" button | The order is placement  |
+| 1 | Click on the search input and enter nothing | EMPTY SEARCH RESULT page is opened and "Unfortunately we have 0 results for this search" text is showed |
+| 2 | Click on the search input and enter "ffffffff" |  EMPTY SEARCH RESULT page is opened and "Unfortunately we have 0 results for this search" text is showed   |
+| 3 | Click on the search input and enter "platform" | SEARCH RESULTS FOR 'PLATFORM' page is opened. Filters, sorts and product's items are showed  |
+
+## Test Case 8: 
+| Id: | 8  |
+| :--- | :----------- |
+| Name: | Sorting product's items by price  |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, chosen location: United Kingdom|
+|| Opened [FOR ALL PAGE](https://www.drmartens.com/us/en/unisex/c/04000000)|
+
+|   | Steps  | Expected results |
+|:------------- |:---------------|:-------------|
+| 1 | Click on the 'SORT BY' button  | Drop-down list with options (Sort By: NAME (ASCENDING), NAME (DESCENDING), PRICE (LOWEST FIRST), PRICE (LOWEST FIRST), PRICE (HIGHEST FIRST), Recommended) appears |
+| 2 | Choose the PRICE (LOWEST FIRST) from drop-down list |  Product's items are displayed from the cheapest to the most expensive one, selected option appears at the sorts block   |
+| 3 | Choose the PRICE (HIGHEST FIRST) from drop-down list | Product's items are displayed from the most expensive to the cheapest one, selected option appears at the sorts block  |
+
+## Test Case 9: 
+| Id: | 9  |
+| :--- | :----------- |
+| Name: | Sorting product's items by name  |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127, chosen location: United Kingdom|
+|| Opened [FOR ALL PAGE](https://www.drmartens.com/us/en/unisex/c/04000000)|
+
+|   | Steps  | Expected results |
+|:------------- |:---------------|:-------------|
+| 1 | Click on the 'SORT BY' button  | Drop-down list with options (Sort By: NAME (ASCENDING), NAME (DESCENDING), PRICE (LOWEST FIRST), PRICE (LOWEST FIRST), PRICE (HIGHEST FIRST), Recommended) appears |
+| 2 | Choose the NAME (ASCENDING) from drop-down list |  Product's items are displayed alphabetically, starting with products whose name begins with a digit; selected option appears at the sorts block   |
+| 3 | Choose the NAME (DESCENDING) from drop-down list | All product's items are displayed starting from the last letter of the alphabet, ending with products starting with a digit; selected option appears at the sorts block  |
+
+## Test Case 10: 
+| Id: | 10  |
+| :--- | :----------- |
+| Name: | Uploading image to gallery  |
+| Preconditions: | Internet connection, Browser Google Chrome v.105.0.5195.127|
+|| Opened https://www.drmartens.com/, chosen location: United Kingdom|
+
+|   | Steps  | Expected results |
+|:------------- |:---------------|:-------------|
+| 1 | Click on the 'UPLOAD IMAGE' button on the  'SIX DECADES OF INDIVIDUALITY' block |  Popup with steps and resourse options (Hard Drive, Facebook, Instagram, Youtube) is displayed   |
+| 2 | Click on the Hard Drive option and click on "Choose File"| File explorer is opened on your local device  |
+| 3 | Choose image file (\*.tif, \*.jpg, \*.jpeg, \*.png, \*.svg, \*.jpeg, \*.gif, \*.tiff) and click "NEXT" button | The 2d step block with caption is displayed  |
+| 4 | Choose non-image file ( \*.txt, \*.pdf, \*.xml etc.) and click "NEXT" button | A red block with a text 'Error: only image and video files are allowed.' is displayed  |
+
+
+
+
+
+
+
+
+
 
 
 # Localization Test Cases 
