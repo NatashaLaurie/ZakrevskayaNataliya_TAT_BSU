@@ -18,12 +18,6 @@ public class RecentlyViewedPage extends BasePage {
     }
 
     public String getRecentlyViewedProductName() {
-        String recentlyViewedProductNameXpath = "//*[@id='recently-viewed-products']/div/div[2]/div[1]/a";
-        return Waits.waitForPresenceOfElementLocatedByXpath(driver, recentlyViewedProductNameXpath).getText();
-    }
-
-    public RecentlyViewedPage openPage() {
-        driver.get(DR_MARTENS_RECENTLY_VIEWED_URL);
         try {
             String countryModelSubmitButtonXpath = "//*[@id='country-modal-submit']";
             WebElement countryModelSubmitButton = driver.findElement(By.xpath(countryModelSubmitButtonXpath));
@@ -32,6 +26,13 @@ public class RecentlyViewedPage extends BasePage {
         } catch (Exception e) {
             log.log(Level.DEBUG, e.getMessage());
         }
+        String recentlyViewedProductNameXpath = "//*[@id='recently-viewed-products']/div/div[2]/div[1]/a";
+        return Waits.waitForPresenceOfElementLocatedByXpath(driver, recentlyViewedProductNameXpath).getText();
+    }
+
+    public RecentlyViewedPage openPage() {
+        driver.get(DR_MARTENS_RECENTLY_VIEWED_URL);
+
         return this;
     }
 }
