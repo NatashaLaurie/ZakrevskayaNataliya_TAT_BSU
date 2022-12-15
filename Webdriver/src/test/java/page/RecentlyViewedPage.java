@@ -13,7 +13,6 @@ public class RecentlyViewedPage extends BasePage {
     private final Logger log = LogManager.getRootLogger();
     private static final String DR_MARTENS_RECENTLY_VIEWED_URL = "https://www.drmartens.com/uk/en_gb/recent?c=0&d=d";
 
-
     protected RecentlyViewedPage(WebDriver driver) {
         super(driver);
     }

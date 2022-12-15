@@ -33,7 +33,7 @@ public class ProductItemPage extends BasePage {
 
     public RecentlyViewedPage showRecentlyViewedProducts() {
         recentlyViewedIcon.click();
-        return new RecentlyViewedPage(driver).openPage();
+        return new RecentlyViewedPage(driver);
     }
 
 
