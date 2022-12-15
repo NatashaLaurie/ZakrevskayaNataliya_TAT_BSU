@@ -11,7 +11,6 @@ public class CartPage extends BasePage {
     public static String CART_PAGE_URL = "https://www.drmartens.com/us/en/cart";
 
     private final String moveToWishListButtonXpath = "//button[@class='item__move-wishlist']";
-    private final String openPromoCodeFieldButtonXpath = "//button[@class='js-accordion-call accordion-arrow']";
     private final String promoCodeInputFieldXpath = "//*[@id='js-voucher-code-text']";
     private final String applyPromoCodeButtonXpath = "//*[@id='js-voucher-apply-btn']";
 
@@ -19,8 +18,6 @@ public class CartPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = openPromoCodeFieldButtonXpath)
-    private WebElement openPromoCodeFieldButton;
 
     @FindBy(xpath = promoCodeInputFieldXpath)
     private WebElement promoCodeInputField;
@@ -57,7 +54,8 @@ public class CartPage extends BasePage {
     }
 
     public CartPage enterPromoCode(String promoCode) {
-        openPromoCodeFieldButton.click();
+        String openPromoCodeFieldButtonXpath = "//button[@class='js-accordion-call accordion-arrow']";
+        Waits.waitForVisibilityOfElementLocatedByXpath(driver, openPromoCodeFieldButtonXpath).click();
         promoCodeInputField.sendKeys(promoCode);
         applyPromoCodeButton.click();
         return this;
