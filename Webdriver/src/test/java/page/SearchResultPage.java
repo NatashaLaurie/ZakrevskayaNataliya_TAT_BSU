@@ -3,6 +3,7 @@ package page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import util.Waits;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class SearchResultPage extends BasePage {
 
-    private final String productsListXpath = "//span[contains(@class, 'current-price bfx-price')]";
+    private final String productsListXpath = "//a[contains(@class, 'product__list__item__name')]";
 
     @FindBy(xpath = productsListXpath)
     private List<WebElement> productsList;
@@ -34,6 +35,6 @@ public class SearchResultPage extends BasePage {
 
     @Override
     protected SearchResultPage openPage() {
-        throw new RuntimeException("Direct access to search results page is not needed");
+       throw new RuntimeException("Direct access to search results page is not needed");
     }
 }
