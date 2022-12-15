@@ -1,11 +1,17 @@
 package page;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import util.Waits;
 
 public class ProductItemPage extends BasePage {
+
+    private final Logger log = LogManager.getRootLogger();
 
     private static final String DR_MARTENS_PRODUCTS_ITEM_PAGE_URL = "https://www.drmartens.com/us/en/1461-smooth-leather-oxford-shoes-/p/11838002";
     private final String recentlyViewedIconXpath = "//a[@class='js-recently-viewed']";
@@ -55,8 +61,14 @@ public class ProductItemPage extends BasePage {
     @Override
     public ProductItemPage openPage() {
         driver.get(DR_MARTENS_PRODUCTS_ITEM_PAGE_URL);
-        countryModelSubmitButton.click();
-        Waits.waitForInvisibilityOfElementLocatedByXpath(driver, countryModelSubmitButtonXpath);
+        try {
+            String countryModelSubmitButtonXpath = "//*[@id='country-modal-submit']";
+            WebElement countryModelSubmitButton = driver.findElement(By.xpath(countryModelSubmitButtonXpath));
+            countryModelSubmitButton.click();
+            Waits.waitForInvisibilityOfElementLocatedByXpath(driver, countryModelSubmitButtonXpath);
+        } catch (Exception e) {
+            log.log(Level.DEBUG, e.getMessage());
+        }
         return this;
     }
 

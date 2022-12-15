@@ -4,7 +4,7 @@
 <suite name="Smoke" verbose="1" >
     <test name="DrMartensSearchTests"   >
         <classes>
-            <class name="test.SearchResultTest" />
+            <class name="test.CartTest" />
         </classes>
     </test>
 </suite>
