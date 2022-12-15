@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class Waits {
-    private static final Duration WAIT_TIMEOUT_SECONDS = Duration.ofSeconds(10);
+    private static final Duration WAIT_TIMEOUT_SECONDS = Duration.ofSeconds(20);
 
     public static WebElement waitForPresenceOfElementLocatedByXpath(WebDriver driver, String elementXpath) {
         return new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS)

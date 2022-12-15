@@ -21,8 +21,8 @@ public class SearchResultPage extends BasePage {
     }
 
     public String getEmptySearchResultHeaderText() {
-        String pageNameHeaderXpath = "//*[@class='pageName']";
-        return Waits.waitForPresenceOfElementLocatedByXpath(driver, pageNameHeaderXpath).getText();
+        String pageNameHeaderXpath = "//h1[@class=\"pageName\"]";
+        return Waits.waitForVisibilityOfElementLocatedByXpath(driver, pageNameHeaderXpath).getText();
     }
 
     public List<String> getDescriptionOfCommonSearchResults() {
